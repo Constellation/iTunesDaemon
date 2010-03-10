@@ -228,13 +228,26 @@ iTunes::CurrentTrack(void) const
     if(hRes == S_OK){
       track->Init(itrack);
       itrack->Release();
-      return track;
     } else {
-      return track;
+      IITTrackCollection *icol;
+      hRes = iTunes_->get_SelectedTracks(&icol);
+      if(hRes == S_OK){
+        long count;
+        hRes = icol->get_Count(&count);
+        if(hRes == S_OK){
+          if(count > 0){
+            hRes = icol->get_Item(0, &itrack);
+            if(hRes == S_OK){
+              track->Init(itrack);
+              itrack->Release();
+            }
+          }
+        }
+        icol->Release();
+      }
     }
-  } else {
-    return track;
   }
+  return track;
 }
 
 bool
