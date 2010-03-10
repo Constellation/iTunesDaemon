@@ -236,7 +236,7 @@ iTunes::CurrentTrack(void) const
         hRes = icol->get_Count(&count);
         if(hRes == S_OK){
           if(count > 0){
-            hRes = icol->get_Item(0, &itrack);
+            hRes = icol->get_Item(1, &itrack);
             if(hRes == S_OK){
               track->Init(itrack);
               itrack->Release();
