@@ -1,0 +1,10 @@
+{
+   "background_page": "background.html",
+   "options_page": "options.html",
+   "description": "iTunes daemon",
+   "name": "iTunes daemon",
+   "plugins": [
+     {"path": "itunes_daemon.dll", "public" : false}
+   ],
+   "version": "0.0.1"
+}

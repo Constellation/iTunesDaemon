@@ -1,0 +1,28 @@
+= iTunes daemon
+
+== HOW TO BUILD
+
+puts top directory manifest.json that's about build env
+so, following
+
+  {
+    "CC": "path/to/ccompiler",
+    "CFLAGS": "content about cflags",
+    "LIB": "path/to/library",
+    "INCLUDE": "path/to/include"
+  }
+
+then
+
+  rake compile
+
+== VERSION
+
+0.0.1
+
+== LICENSE
+
+iTunes daemon
+(The MIT License)
+Copyright (c) 2010 Constellation
+

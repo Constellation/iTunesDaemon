@@ -1,0 +1,6 @@
+{
+  "CC": "g++",
+  "CFLAGS": "-g -pedantic -Wall -O2 -DXULRUNNER_SDK -DXP_UNIX=1 -DMOZ_X11=1 -fPIC",
+  "LIBRARY": "",
+  "INCLUDE": "-I/usr/include/xulrunner-1.9/stable"
+}

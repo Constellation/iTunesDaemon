@@ -1,0 +1,6 @@
+*.ilk
+*.lib
+*.obj
+*.res
+*.exp
+ext/resource.h
