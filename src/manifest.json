@@ -1,10 +1,10 @@
 {
    "background_page": "background.html",
-   "options_page": "options.html",
    "description": "iTunes daemon",
    "name": "iTunes daemon",
    "plugins": [
      {"path": "itunes_daemon.dll", "public" : false}
    ],
-   "version": "0.0.1"
+   "version": "0.0.1",
+   "update_url":"http://github.s3.amazonaws.com/downloads/Constellation/iTunesDaemon/updates.xml"
 }

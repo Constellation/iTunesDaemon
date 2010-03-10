@@ -72,21 +72,23 @@ desc "upload"
 task :upload do
   login = `git config github.user`.chomp
   token = `git config github.token`.chomp
-  repos = $name
+  repos = "iTunesDaemon"
   gh = Net::GitHub::Upload.new(
     :login => login,
     :token => token
   )
-  direct_link = gh.upload(
+  direct_link = gh.replace(
     :repos => repos,
-    :file  => "package/#{$name}.crx",
+    :file  => "pkg/#{$name}.crx",
     :description => "latest version: #{$version}"
-  )
-  direct_link = gh.upload(
+  ).gsub("%2F", "/")
+  puts direct_link
+  direct_link = gh.replace(
     :repos => repos,
     :file  => "updates.xml",
     :description => "updates.xml version: #{$version}"
-  )
+  ).gsub("%2F", "/")
+  puts direct_link
 end
 
 desc "compile"
